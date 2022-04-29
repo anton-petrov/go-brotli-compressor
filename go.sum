@@ -1,0 +1,4 @@
+github.com/andybalholm/brotli v1.0.4 h1:V7DdXeJtZscaqfNuAdSRuRFzuiKlHSC/Zh3zl9qY3JY=
+github.com/andybalholm/brotli v1.0.4/go.mod h1:fO7iG3H7G2nSZ7m0zPUDn85XEX2GTukHGRSepvi9Eig=
+github.com/tjarratt/babble v0.0.0-20210505082055-cbca2a4833c1 h1:j8whCiEmvLCXI3scVn+YnklCU8mwJ9ZJ4/DGAKqQbRE=
+github.com/tjarratt/babble v0.0.0-20210505082055-cbca2a4833c1/go.mod h1:O5hBrCGqzfb+8WyY8ico2AyQau7XQwAfEQeEQ5/5V9E=
