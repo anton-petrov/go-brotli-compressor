@@ -15,7 +15,6 @@ import (
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-
 	// Configure flags
 	compress := ""
 	decompress := ""
@@ -39,7 +38,6 @@ func main() {
 		println("Compressing data...")
 		output_data, _ = Compress(input_data, quality)
 		ioutil.WriteFile(input+".brotli", output_data, 0777)
-
 	} else if decompress != "" {
 		input = decompress
 		input_data = ReadFile(input)
@@ -49,7 +47,6 @@ func main() {
 	} else if test != 0 {
 		println("Preparing benchmark...")
 		input_data = gen_rand_text(test * 100000)
-		defer timeTrack(time.Now(), "benchmark")
 		println("Compressing data") // bytes.NewBuffer(input_data).String()
 		output_data, _ = Compress(input_data, quality)
 		println("Desompressing data")
@@ -59,10 +56,6 @@ func main() {
 	}
 
 	println("Input data length:", len(input_data), "Output data length:", len(output_data))
-	fmt.Printf("Ratio: %f\n", float64(len(output_data)) / float64(len(input_data)))
+	fmt.Printf("Ratio: %f\n", float64(len(output_data))/float64(len(input_data)))
 	println("Go!")
-}
-
-func float(i int) {
-	panic("unimplemented")
 }

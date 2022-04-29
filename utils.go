@@ -31,6 +31,7 @@ func gen_rand_text(size int) []byte {
 
 // Compress returns content encoded with Brotli.
 func Compress(content []byte, quality int) ([]byte, error) {
+	defer timeTrack(time.Now(), "Compress")
 	var buf bytes.Buffer
 	writer := NewWriterOptions(&buf, WriterOptions{Quality: quality})
 	_, err := writer.Write(content)
@@ -46,6 +47,7 @@ func SimpleBenchmark(size_bytes int) {
 
 // Decompressing Brotli encoded data.
 func Decompress(encodedData []byte) ([]byte, error) {
+	defer timeTrack(time.Now(), "Deompress")
 	r := NewReader(bytes.NewReader(encodedData))
 	return ioutil.ReadAll(r)
 }
