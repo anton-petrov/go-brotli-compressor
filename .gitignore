@@ -2,3 +2,4 @@
 *.brotli
 brotli
 *.fmrstr
+*.gzip
